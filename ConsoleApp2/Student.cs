@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApp2
 {
-    class Student
+    internal class Student
     {
         protected int EineMatrikelnummer;
 
