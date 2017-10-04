@@ -1,5 +1,4 @@
-﻿using ConsoleApp1;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp2
 {
-    delegate void StudentDel();
-    class Program
+    internal delegate void StudentDel();
+
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Student s = new Student() { Matrikelnummer = 123456 };
-            s.StudentEvent += () => { throw new Exception("Ungültige Nummer"); };
+            var s = new Student { Matrikelnummer = 123456 };
+            s.StudentEvent += () => throw new Exception("Ungültige Nummer");
 
             while (true)
             {

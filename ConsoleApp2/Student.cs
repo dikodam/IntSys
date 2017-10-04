@@ -1,19 +1,12 @@
-﻿using ConsoleApp2;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConsoleApp1
+﻿namespace ConsoleApp2
 {
     class Student
     {
-        protected int matrikelnummer;
+        protected int EineMatrikelnummer;
 
         public int Matrikelnummer
         {
-            get { return matrikelnummer; }
+            get => EineMatrikelnummer;
             set
             {
                 if (value.ToString().Length != 6)
@@ -22,7 +15,7 @@ namespace ConsoleApp1
                 }
                 else
                 {
-                    matrikelnummer = value;
+                    EineMatrikelnummer = value;
                 }
             }
         }

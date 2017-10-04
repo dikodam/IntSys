@@ -4,25 +4,24 @@ namespace ConsoleApp1
 {
     public delegate void RechenOperation(double a, double b);
 
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            double operand1, operand2;
             RechenOperation meineOperation = null;
             try
             {
                 Console.Write("Ersten Operand: ");
-                operand1 = Convert.ToDouble(Console.ReadLine());
+                var operand1 = Convert.ToDouble(Console.ReadLine());
                 Console.Write("Zweiten Operand: ");
-                operand2 = Convert.ToDouble(Console.ReadLine());
+                var operand2 = Convert.ToDouble(Console.ReadLine());
 
                 meineOperation += Addiere;
                 meineOperation += Multipliziere;
 
                 RechenOperation add = Addiere;
                 RechenOperation mult = Multipliziere;
-                RechenOperation[] delArr = new RechenOperation[] { meineOperation, add, mult };
+                Delegate[] delArr = { meineOperation, add, mult };
                 meineOperation = (RechenOperation)Delegate.Combine(delArr);
 
                 meineOperation += ((double a, double b) => { Console.WriteLine(a + b); });
@@ -33,7 +32,8 @@ namespace ConsoleApp1
             }
             catch (FormatException) { Console.WriteLine("Falsche Eingabe"); }
         }
-        static void Addiere(double op1, double op2) { Console.WriteLine(op1 + op2); }
-        static void Multipliziere(double op1, double op2) { Console.WriteLine(op1 * op2); }
+
+        private static void Addiere(double op1, double op2) { Console.WriteLine(op1 + op2); }
+        private static void Multipliziere(double op1, double op2) { Console.WriteLine(op1 * op2); }
     }
 }
