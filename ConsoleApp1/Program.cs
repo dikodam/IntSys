@@ -9,13 +9,12 @@ namespace ConsoleApp1
     {
         private static void Main(string[] args)
         {
-            RechenOperation meineOperation = null;
             var operand1 = RequestUserInput("Ersten Operand: ");
             var operand2 = RequestUserInput("Zweiten Operand: ");
-            
+
             // Aufgabe 2: Erstelle Multicast Delegaten...
             // ...via Operatoren
-            meineOperation += Addiere;
+            RechenOperation meineOperation = Addiere;
             meineOperation += Multipliziere;
 
             // ...via Methode der Klasse Delegate
@@ -41,8 +40,9 @@ namespace ConsoleApp1
                 Console.Write(askFor);
                 operand = Convert.ToDouble(Console.ReadLine());
             }
-            catch (FormatException) {
-                Console.WriteLine("Falsche Eingabe");
+            catch (FormatException e)
+            {
+                Console.WriteLine($"{e.Message}");
                 Environment.Exit(0);
             }
             return operand;
