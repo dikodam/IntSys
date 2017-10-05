@@ -24,6 +24,10 @@ namespace ConsoleApp1
             meineOperation = (RechenOperation)Delegate.Combine(delArr);
 
             // ...via Anonyme Methode
+            meineOperation += delegate(double a, double b) { Console.WriteLine($"Summe:   {a} + {b} = {a + b}"); };
+            meineOperation += delegate(double a, double b) { Console.WriteLine($"Produkt: {a} * {b} = {a * b}"); };
+
+            // ...via Lambda Ausdruck
             meineOperation += ((double a, double b) => { Console.WriteLine($"Summe:   {a} + {b} = {a + b}"); });
             meineOperation += ((double a, double b) => { Console.WriteLine($"Produkt: {a} * {b} = {a * b}"); });
 
