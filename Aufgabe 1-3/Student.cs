@@ -10,13 +10,9 @@
             set
             {
                 if (value.ToString().Length != 6)
-                {
                     StudentEvent?.Invoke();
-                }
                 else
-                {
                     EineMatrikelnummer = value;
-                }
             }
         }
 
