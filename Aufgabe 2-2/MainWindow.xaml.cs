@@ -79,7 +79,7 @@ namespace Aufgabe_2_2
                 Margin = new Thickness(110, -50, 0, 0),
                 Name = "TheSlider"
             };
-            slider.AddHandler(Slider.ValueChangedEvent, new RoutedPropertyChangedEventHandler<object>(SliderChange));
+            // slider.AddHandler(Slider.ValueChangedEvent, new RoutedPropertyChangedEventHandler<object>(SliderChange));
             return slider;
         }
         private void ResetSlider(object sender, RoutedEventArgs e)
