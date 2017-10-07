@@ -1,17 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Aufgabe_2_2
 {
@@ -68,6 +58,7 @@ namespace Aufgabe_2_2
                 Name = "TheButton"
             };
             button.Click += new RoutedEventHandler(ResetSlider);
+            button.AddHandler(Button.MouseEnterEvent, new RoutedEventHandler(GoAway));
             return button;
         }
 
@@ -101,6 +92,21 @@ namespace Aufgabe_2_2
                 ((Button) uiElements["TheButton"]).IsEnabled = true;
         }
 
+        private void GoAway(object sender, RoutedEventArgs e)
+        {
+            GenerateRandomPaddings(out int leftPadding, out int topPadding);
+            ((Button)uiElements["TheButton"]).Margin = new Thickness(leftPadding, topPadding, 0, 0);
+        }
 
+        private void GenerateRandomPaddings(out int leftPadding, out int topPadding)
+        {
+            Random rnd = new Random();
+            int buttonWidht = (int)((Button)uiElements["TheButton"]).Width;
+            int buttonHeight = (int)((Button)uiElements["TheButton"]).Height;
+            int halfWindowWidth = (int)Math.Floor(Width) / 2;
+            int halfWindowHeight = (int)Math.Floor(Height) / 2;
+            leftPadding = rnd.Next(-halfWindowWidth, halfWindowWidth - buttonWidht);
+            topPadding = rnd.Next(-halfWindowHeight, halfWindowHeight - buttonHeight);
+        }
     }
 }
