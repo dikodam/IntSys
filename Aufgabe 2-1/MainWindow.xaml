@@ -25,7 +25,7 @@
                 </ImageBrush.RelativeTransform>
             </ImageBrush>
         </Grid.Background>
-        <Slider x:Name="TheSlider" VerticalAlignment="Top" Height="20" Margin="145,40,0,0" HorizontalAlignment="Left" Width="248" Maximum="100" RenderTransformOrigin="0.5,0.5" ValueChanged="SliderChange">
+        <Slider x:Name="TheSlider" VerticalAlignment="Top" Height="20" Margin="145,40,0,0" HorizontalAlignment="Left" Width="248" Maximum="100" RenderTransformOrigin="0.5,0.5" ValueChanged="SliderChange" IsSnapToTickEnabled="True">
             <Slider.Effect>
                 <DropShadowEffect/>
             </Slider.Effect>
