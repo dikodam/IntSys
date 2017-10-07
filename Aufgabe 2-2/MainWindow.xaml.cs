@@ -50,10 +50,11 @@ namespace Aufgabe_2_2
             };
 
         private TextBlock CreateTheTextBlock() => new TextBlock {
-                Width = 100,
-                Height = 100,
+                Width = 80,
+                Height = 50,
+                TextAlignment = TextAlignment.Right,
                 Text = "Not initialized",
-                Margin = new Thickness(-310, 22, 0, 0),
+                Margin = new Thickness(-350, -20, 0, 0),
                 Name = "TheTextBlock"
             };
 
@@ -76,10 +77,12 @@ namespace Aufgabe_2_2
             {
                 Width = 350,
                 Height = 28,
+                Minimum = 0,
+                Maximum = 100,
                 Margin = new Thickness(110, -50, 0, 0),
                 Name = "TheSlider"
             };
-            // slider.AddHandler(Slider.ValueChangedEvent, new RoutedPropertyChangedEventHandler<object>(SliderChange));
+            slider.AddHandler(Slider.ValueChangedEvent, new RoutedPropertyChangedEventHandler<double>(SliderChange));
             return slider;
         }
         private void ResetSlider(object sender, RoutedEventArgs e)
@@ -90,7 +93,12 @@ namespace Aufgabe_2_2
 
         private void SliderChange(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            ((TextBlock)uiElements["TheTextBlock"]).Text = e.NewValue.ToString();
+            var new_value = Math.Round(e.NewValue, 0);
+            ((TextBlock) uiElements["TheTextBlock"]).Text = Math.Round(e.NewValue, 0).ToString();
+            if (new_value == 0)
+                ((Button) uiElements["TheButton"]).IsEnabled = false;
+            else
+                ((Button) uiElements["TheButton"]).IsEnabled = true;
         }
 
 
