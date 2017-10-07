@@ -99,5 +99,6 @@ A:
      Anzahl der angezeigten Dateien:
               29 Datei(en),         43.601 Bytes
               26 Verzeichnis(se)
+
 Q: Suchen Sie die Toolbox mit den Interaktionselementen
 A: Done.
