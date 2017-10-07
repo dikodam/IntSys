@@ -29,7 +29,6 @@ namespace Aufgabe_2_1
         private void ResetSlider(object sender, RoutedEventArgs e)
         {
             TheSlider.Value = 0;
-            TheTextBox.Text = "0";
         }
 
         private void SliderChange(object sender, RoutedPropertyChangedEventArgs<double> e)
