@@ -1,0 +1,103 @@
+Q: Warum können sowohl in C# als auch in VisualBasic WPF-Programme erstellt werden?
+A: Weil sie auf .NET basieren. Somit können alle .NET sprachen benutzt werden um WPF-Programme zu erstellen.
+
+Q: Welche Dateien finden Sie vor?
+A:
+\Aufgabe 2-1>dir /s
+
+ Verzeichnis von \Aufgabe 2-1
+
+06.10.2017  18:29    <DIR>          .
+06.10.2017  18:29    <DIR>          ..
+06.10.2017  18:23               189 App.config
+06.10.2017  18:23               376 App.xaml
+06.10.2017  18:23               347 App.xaml.cs
+06.10.2017  18:23             4.109 Aufgabe 2-1.csproj
+06.10.2017  18:23    <DIR>          bin
+06.10.2017  18:23               509 MainWindow.xaml
+06.10.2017  18:23               664 MainWindow.xaml.cs
+06.10.2017  18:23    <DIR>          obj
+06.10.2017  18:23    <DIR>          Properties
+               6 Datei(en),          6.194 Bytes
+
+ Verzeichnis von \Aufgabe 2-1\bin
+
+06.10.2017  18:23    <DIR>          .
+06.10.2017  18:23    <DIR>          ..
+06.10.2017  18:23    <DIR>          Debug
+06.10.2017  18:23    <DIR>          Release
+               0 Datei(en),              0 Bytes
+
+ Verzeichnis von \Aufgabe 2-1\bin\Debug
+
+06.10.2017  18:23    <DIR>          .
+06.10.2017  18:23    <DIR>          ..
+               0 Datei(en),              0 Bytes
+
+ Verzeichnis von \Aufgabe 2-1\bin\Release
+
+06.10.2017  18:23    <DIR>          .
+06.10.2017  18:23    <DIR>          ..
+               0 Datei(en),              0 Bytes
+
+ Verzeichnis von \Aufgabe 2-1\obj
+
+06.10.2017  18:23    <DIR>          .
+06.10.2017  18:23    <DIR>          ..
+06.10.2017  18:23    <DIR>          Debug
+06.10.2017  18:23    <DIR>          Release
+               0 Datei(en),              0 Bytes
+
+ Verzeichnis von \Aufgabe 2-1\obj\Debug
+
+06.10.2017  18:23    <DIR>          .
+06.10.2017  18:23    <DIR>          ..
+06.10.2017  18:23             2.354 App.g.cs
+06.10.2017  18:23             2.354 App.g.i.cs
+06.10.2017  18:23                42 Aufgabe 2-1.csproj.CoreCompileInputs.cache
+06.10.2017  18:23               272 Aufgabe 2-1_MarkupCompile.i.cache
+06.10.2017  18:23                81 Aufgabe 2-1_MarkupCompile.i.lref
+06.10.2017  18:23               273 Aufgabe_2_1_MarkupCompile.cache
+06.10.2017  18:23                81 Aufgabe_2_1_MarkupCompile.lref
+06.10.2017  18:23             7.307 DesignTimeResolveAssemblyReferencesInput.cache
+06.10.2017  18:23             3.057 MainWindow.g.cs
+06.10.2017  18:23             3.057 MainWindow.g.i.cs
+06.10.2017  18:23                 0 TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+06.10.2017  18:23                 0 TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+06.10.2017  18:23                 0 TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+06.10.2017  18:23    <DIR>          TempPE
+              13 Datei(en),         18.878 Bytes
+
+ Verzeichnis von \Aufgabe 2-1\obj\Debug\TempPE
+
+06.10.2017  18:23    <DIR>          .
+06.10.2017  18:23    <DIR>          ..
+               0 Datei(en),              0 Bytes
+
+ Verzeichnis von \Aufgabe 2-1\obj\Release
+
+06.10.2017  18:23    <DIR>          .
+06.10.2017  18:23    <DIR>          ..
+06.10.2017  18:23             2.354 App.g.cs
+06.10.2017  18:23                42 Aufgabe 2-1.csproj.CoreCompileInputs.cache
+06.10.2017  18:23               269 Aufgabe_2_1_MarkupCompile.cache
+06.10.2017  18:23                81 Aufgabe_2_1_MarkupCompile.lref
+06.10.2017  18:23             3.057 MainWindow.g.cs
+               5 Datei(en),          5.803 Bytes
+
+ Verzeichnis von \Aufgabe 2-1\Properties
+
+06.10.2017  18:23    <DIR>          .
+06.10.2017  18:23    <DIR>          ..
+06.10.2017  18:23             2.765 AssemblyInfo.cs
+06.10.2017  18:23             3.050 Resources.Designer.cs
+06.10.2017  18:23             5.612 Resources.resx
+06.10.2017  18:23             1.098 Settings.Designer.cs
+06.10.2017  18:23               201 Settings.settings
+               5 Datei(en),         12.726 Bytes
+
+     Anzahl der angezeigten Dateien:
+              29 Datei(en),         43.601 Bytes
+              26 Verzeichnis(se)
+Q: Suchen Sie die Toolbox mit den Interaktionselementen
+A: Done.
