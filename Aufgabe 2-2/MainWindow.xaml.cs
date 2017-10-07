@@ -80,7 +80,8 @@ namespace Aufgabe_2_2
                 Minimum = 0,
                 Maximum = 100,
                 Margin = new Thickness(110, -50, 0, 0),
-                Name = "TheSlider"
+                Name = "TheSlider",
+                IsSnapToTickEnabled = true
             };
             slider.AddHandler(Slider.ValueChangedEvent, new RoutedPropertyChangedEventHandler<double>(SliderChange));
             return slider;
@@ -93,9 +94,8 @@ namespace Aufgabe_2_2
 
         private void SliderChange(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            var new_value = Math.Round(e.NewValue, 0);
-            ((TextBlock) uiElements["TheTextBlock"]).Text = Math.Round(e.NewValue, 0).ToString();
-            if (new_value == 0)
+            ((TextBlock) uiElements["TheTextBlock"]).Text = e.NewValue.ToString();
+            if (e.NewValue == 0)
                 ((Button) uiElements["TheButton"]).IsEnabled = false;
             else
                 ((Button) uiElements["TheButton"]).IsEnabled = true;
