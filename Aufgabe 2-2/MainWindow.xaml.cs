@@ -10,21 +10,15 @@ namespace Aufgabe_2_2
     /// </summary>
     public partial class MainWindow : Window
     {
-        Grid theGrid = null;
+        Grid theGrid = new Grid();
         Dictionary<String, UIElement> uiElements = null;
 
         public MainWindow()
         {
-            InitTheGrid();
+            AddChild(theGrid);
             uiElements = CreateUiElements();
             AppendUiElementsToGrid(theGrid);
             InitializeComponent();
-        }
-
-        private void InitTheGrid()
-        {
-            theGrid = new Grid();
-            AddChild(theGrid);
         }
 
         private void AppendUiElementsToGrid(Grid aGrid)
