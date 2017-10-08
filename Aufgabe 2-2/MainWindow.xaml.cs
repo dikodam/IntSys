@@ -57,8 +57,8 @@ namespace Aufgabe_2_2
                 Margin = new Thickness(380, 50, 0, 0),
                 Name = "TheButton"
             };
-            button.Click += new RoutedEventHandler(ResetSlider);
-            button.AddHandler(Button.MouseEnterEvent, new RoutedEventHandler(GoAway));
+            button.Click += ResetSlider;
+            button.MouseEnter += GoAway;
             return button;
         }
 
@@ -74,9 +74,10 @@ namespace Aufgabe_2_2
                 Name = "TheSlider",
                 IsSnapToTickEnabled = true
             };
-            slider.AddHandler(Slider.ValueChangedEvent, new RoutedPropertyChangedEventHandler<double>(SliderChange));
+            slider.ValueChanged += SliderChange;
             return slider;
         }
+
         private void ResetSlider(object sender, RoutedEventArgs e)
         {
             ((Slider) uiElements["TheSlider"]).Value = 0;
