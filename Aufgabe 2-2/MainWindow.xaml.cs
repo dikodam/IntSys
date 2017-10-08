@@ -10,6 +10,10 @@ namespace Aufgabe_2_2
     /// </summary>
     public partial class MainWindow : Window
     {
+        const string buttonKey = "TheButton";
+        const string sliderKey = "TheSlider";
+        const string textBlockKey = "TheTextBlock";
+
         Grid theGrid = new Grid();
         Dictionary<String, UIElement> uiElements = null;
 
@@ -28,9 +32,9 @@ namespace Aufgabe_2_2
         }
 
         private Dictionary<String, UIElement> CreateUiElements() => new Dictionary<String, UIElement>() {
-                { "TheButton", CreateTheButton() },
-                { "TheSlider", CreateTheSlider() },
-                { "TheTextBlock", CreateTheTextBlock() }
+                { buttonKey, CreateTheButton() },
+                { sliderKey, CreateTheSlider() },
+                { textBlockKey, CreateTheTextBlock() }
             };
 
         private TextBlock CreateTheTextBlock() => new TextBlock {
@@ -39,8 +43,8 @@ namespace Aufgabe_2_2
                 TextAlignment = TextAlignment.Right,
                 Text = "Not initialized",
                 Margin = new Thickness(-350, -20, 0, 0),
-                Name = "TheTextBlock"
-            };
+                Name = textBlockKey
+        };
 
         private Button CreateTheButton()
         {
@@ -49,7 +53,7 @@ namespace Aufgabe_2_2
                 Width = 70,
                 Height = 28,
                 Margin = new Thickness(380, 50, 0, 0),
-                Name = "TheButton"
+                Name = buttonKey
             };
             button.Click += ResetSlider;
             button.MouseEnter += GoAway;
@@ -65,7 +69,7 @@ namespace Aufgabe_2_2
                 Minimum = 0,
                 Maximum = 100,
                 Margin = new Thickness(110, -50, 0, 0),
-                Name = "TheSlider",
+                Name = sliderKey,
                 IsSnapToTickEnabled = true
             };
             slider.ValueChanged += SliderChange;
@@ -74,30 +78,30 @@ namespace Aufgabe_2_2
 
         private void ResetSlider(object sender, RoutedEventArgs e)
         {
-            ((Slider) uiElements["TheSlider"]).Value = 0;
-            ((TextBlock) uiElements["TheTextBlock"]).Text = "0";
+            ((Slider) uiElements[sliderKey]).Value = 0;
+            ((TextBlock) uiElements[textBlockKey]).Text = "0";
         }
 
         private void SliderChange(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            ((TextBlock) uiElements["TheTextBlock"]).Text = e.NewValue.ToString();
+            ((TextBlock) uiElements[textBlockKey]).Text = e.NewValue.ToString();
             if (e.NewValue == 0)
-                ((Button) uiElements["TheButton"]).IsEnabled = false;
+                ((Button) uiElements[buttonKey]).IsEnabled = false;
             else
-                ((Button) uiElements["TheButton"]).IsEnabled = true;
+                ((Button) uiElements[buttonKey]).IsEnabled = true;
         }
 
         private void GoAway(object sender, RoutedEventArgs e)
         {
             GenerateRandomPaddings(out int leftPadding, out int topPadding);
-            ((Button)uiElements["TheButton"]).Margin = new Thickness(leftPadding, topPadding, 0, 0);
+            ((Button)uiElements[buttonKey]).Margin = new Thickness(leftPadding, topPadding, 0, 0);
         }
 
         private void GenerateRandomPaddings(out int leftPadding, out int topPadding)
         {
             Random rnd = new Random();
-            int buttonWidht = (int)((Button)uiElements["TheButton"]).Width;
-            int buttonHeight = (int)((Button)uiElements["TheButton"]).Height;
+            int buttonWidht = (int)((Button)uiElements[buttonKey]).Width;
+            int buttonHeight = (int)((Button)uiElements[buttonKey]).Height;
             int halfWindowWidth = (int)Math.Floor(Width) / 2;
             int halfWindowHeight = (int)Math.Floor(Height) / 2;
             leftPadding = rnd.Next(-halfWindowWidth, halfWindowWidth - buttonWidht);
