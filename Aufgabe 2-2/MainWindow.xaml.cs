@@ -93,19 +93,19 @@ namespace Aufgabe_2_2
 
         private void GoAway(object sender, RoutedEventArgs e)
         {
-            GenerateRandomPaddings(out int leftPadding, out int topPadding);
-            ((Button)uiElements[buttonKey]).Margin = new Thickness(leftPadding, topPadding, 0, 0);
+            ((Button)uiElements[buttonKey]).Margin = GenerateRandomPaddings();
         }
 
-        private void GenerateRandomPaddings(out int leftPadding, out int topPadding)
+        private Thickness GenerateRandomPaddings()
         {
             Random rnd = new Random();
             int buttonWidht = (int)((Button)uiElements[buttonKey]).Width;
             int buttonHeight = (int)((Button)uiElements[buttonKey]).Height;
             int halfWindowWidth = (int)Math.Floor(Width) / 2;
             int halfWindowHeight = (int)Math.Floor(Height) / 2;
-            leftPadding = rnd.Next(-halfWindowWidth, halfWindowWidth - buttonWidht);
-            topPadding = rnd.Next(-halfWindowHeight, halfWindowHeight - buttonHeight);
+            int leftPadding = rnd.Next(-halfWindowWidth, halfWindowWidth - buttonWidht);
+            int topPadding = rnd.Next(-halfWindowHeight, halfWindowHeight - buttonHeight);
+            return new Thickness(leftPadding, topPadding, 0, 0);
         }
     }
 }
