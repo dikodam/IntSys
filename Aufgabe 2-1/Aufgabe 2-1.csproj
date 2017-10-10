@@ -99,5 +99,9 @@
   <ItemGroup>
     <Resource Include="so_good.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="AIRHORN.mp3" />
+    <Content Include="damn.mp3" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

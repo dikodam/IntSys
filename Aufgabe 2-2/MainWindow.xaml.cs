@@ -85,10 +85,7 @@ namespace Aufgabe_2_2
         private void SliderChange(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             ((TextBlock) uiElements[textBlockKey]).Text = e.NewValue.ToString();
-            if (e.NewValue == 0)
-                ((Button) uiElements[buttonKey]).IsEnabled = false;
-            else
-                ((Button) uiElements[buttonKey]).IsEnabled = true;
+            ((Button)uiElements[buttonKey]).IsEnabled = e.NewValue == 0 ? false : true;
         }
 
         private void GoAway(object sender, RoutedEventArgs e)

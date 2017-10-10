@@ -38,13 +38,13 @@
                 </TransformGroup>
             </Slider.RenderTransform>
         </Slider>
-        <Button Content="Reset" HorizontalAlignment="Left" Margin="318,90,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.5,0.5" Click="ResetSlider" Opacity="0.7">
+        <Button x:Name="TheButton" Content="Reset" HorizontalAlignment="Left" Margin="265,100,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.5,0.5" Click="ResetSlider" Opacity="0.7" FontFamily="Chiller">
             <Button.Effect>
                 <BlurEffect Radius="1" RenderingBias="Quality"/>
             </Button.Effect>
             <Button.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform ScaleY="1" ScaleX="2"/>
+                    <ScaleTransform ScaleY="1" ScaleX="4"/>
                     <SkewTransform AngleY="9" AngleX="-39"/>
                     <RotateTransform Angle="-14"/>
                     <TranslateTransform/>
