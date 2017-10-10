@@ -1,5 +1,8 @@
 Q: Warum können sowohl in C# als auch in VisualBasic WPF-Programme erstellt werden?
-A: Weil sie auf .NET basieren. Somit können alle .NET sprachen benutzt werden um WPF-Programme zu erstellen.
+A: Weil diese auf .NET basieren. Die .NET-Sprachen werden i. d. R. beim kompilieren zur Intermediate Language (IL) übersetzt.
+Erst bei der konkreten Ausführung wird in das jeweilige Zielsystem übersetzt.
+Da WPF ebenfalls .NET-basiert ist, können im Prinzip alle .NET-Sprachen WPF Anwendungen erstellen. 
+
 
 Q: Welche Dateien finden Sie vor?
 A:
