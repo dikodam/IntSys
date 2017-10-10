@@ -31,8 +31,7 @@ namespace Aufgabe_2_1
             TheTextBox.Text = e.NewValue.ToString();
             airHorn.Stop();
             airHorn.Play();
-            TheButton.IsEnabled = e.NewValue == 0 ? false : true;
-            
+            TheButton.IsEnabled = e.NewValue != 0;
         }
     }
 }
