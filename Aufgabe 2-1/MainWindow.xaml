@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Aufgabe_2_1"
         mc:Ignorable="d"
         Title="MainWindow" Height="182.353" Width="475.98">
-    <Grid Margin="0,0,2,0">
+    <Grid Margin="0,0,0,0" x:Name="TheGrid">
         <Grid.OpacityMask>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black" Offset="0"/>
@@ -25,7 +25,7 @@
                 </ImageBrush.RelativeTransform>
             </ImageBrush>
         </Grid.Background>
-        <Slider x:Name="TheSlider" VerticalAlignment="Top" Height="20" Margin="145,40,0,0" HorizontalAlignment="Left" Width="248" Maximum="100" RenderTransformOrigin="0.5,0.5" ValueChanged="SliderChange" IsSnapToTickEnabled="True">
+        <Slider x:Name="TheSlider" Margin="145,40,0,91" Maximum="100" RenderTransformOrigin="0.5,0.5" ValueChanged="SliderChange" IsSnapToTickEnabled="True" HorizontalAlignment="Left" Width="248">
             <Slider.Effect>
                 <DropShadowEffect/>
             </Slider.Effect>
@@ -38,7 +38,7 @@
                 </TransformGroup>
             </Slider.RenderTransform>
         </Slider>
-        <Button x:Name="TheButton" Content="Reset" HorizontalAlignment="Left" Margin="265,100,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.5,0.5" Click="ResetSlider" Opacity="0.7" FontFamily="Chiller" IsEnabled="False">
+        <Button x:Name="TheButton" Content="Reset" Margin="0,0,126,33" RenderTransformOrigin="0.5,0.5" Click="ResetSlider" Opacity="0.7" FontFamily="Chiller" IsEnabled="False" Height="18" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75">
             <Button.Effect>
                 <BlurEffect Radius="1" RenderingBias="Quality"/>
             </Button.Effect>

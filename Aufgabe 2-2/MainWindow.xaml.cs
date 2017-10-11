@@ -85,7 +85,7 @@ namespace Aufgabe_2_2
         private void SliderChange(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             ((TextBlock) uiElements[textBlockKey]).Text = e.NewValue.ToString();
-            ((Button)uiElements[buttonKey]).IsEnabled = e.NewValue == 0 ? false : true;
+            ((Button) uiElements[buttonKey]).IsEnabled = e.NewValue == 0 ? false : true;
         }
 
         private void GoAway(object sender, RoutedEventArgs e)
@@ -96,10 +96,10 @@ namespace Aufgabe_2_2
         private Thickness GenerateRandomPaddings()
         {
             Random rnd = new Random();
-            int buttonWidht = (int)((Button)uiElements[buttonKey]).Width;
-            int buttonHeight = (int)((Button)uiElements[buttonKey]).Height;
-            int halfWindowWidth = (int)Math.Floor(Width) / 2;
-            int halfWindowHeight = (int)Math.Floor(Height) / 2;
+            int buttonWidht = (int) ((Button) uiElements[buttonKey]).Width;
+            int buttonHeight = (int) ((Button) uiElements[buttonKey]).Height;
+            int halfWindowWidth = (int) Math.Floor(Width) / 2;
+            int halfWindowHeight = (int) Math.Floor(Height) / 2;
             int leftPadding = rnd.Next(-halfWindowWidth, halfWindowWidth - buttonWidht);
             int topPadding = rnd.Next(-halfWindowHeight, halfWindowHeight - buttonHeight);
             return new Thickness(leftPadding, topPadding, 0, 0);
