@@ -25,6 +25,7 @@
                 </ImageBrush.RelativeTransform>
             </ImageBrush>
         </Grid.Background>
+        <Rectangle x:Name="frcolor" Fill="#5BF4F4F5" Stroke="Black" Margin="0,0,-0.4,-0.2"/>
         <Slider x:Name="TheSlider" Margin="145,40,0,91" Maximum="100" RenderTransformOrigin="0.5,0.5" ValueChanged="SliderChange" IsSnapToTickEnabled="True" HorizontalAlignment="Left" Width="248">
             <Slider.Effect>
                 <DropShadowEffect/>
