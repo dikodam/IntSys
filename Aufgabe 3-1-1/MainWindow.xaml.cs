@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,16 +13,26 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Aufgabe_3_1_1
+namespace WpfApp1
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
+
+            var boxes = ThePanel.Children;
+            List<Binding> bindings = new List<Binding>();
+            foreach (TextBox box in boxes)
+            {
+                bindings.Add(new Binding("Text"));
+                bindings.Last().Source = boxes[(boxes.IndexOf(box) + 1) % boxes.Count];
+                box.SetBinding(TextBox.TextProperty, bindings.Last());
+            }
         }
     }
 }
