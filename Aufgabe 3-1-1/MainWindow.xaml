@@ -17,6 +17,5 @@
         <TextBox Height="23" TextWrapping="Wrap" Width="120"/>
         <TextBox Height="23" TextWrapping="Wrap" Width="120"/>
         <TextBox Height="23" TextWrapping="Wrap" Width="120"/>
-        
     </WrapPanel>
 </Window>
