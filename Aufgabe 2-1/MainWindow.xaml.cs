@@ -32,9 +32,8 @@ namespace Aufgabe_2_1
         {
             Dispatcher.Invoke(() =>
             {
-                Height = 500;
-                Width = 1000;
-                TheGrid.Width = new Random().Next(200, 1000);
+                Height = new Random().Next(200, 1000);
+                Width = new Random().Next(200, 1000);
             });
         }
 
@@ -58,7 +57,6 @@ namespace Aufgabe_2_1
             TheTextBox.Text = e.NewValue.ToString();
             airHorn.Stop();
             airHorn.Play();
-            airHorn.SpeedRatio = new Random().Next(0,100) / 100;
             TheButton.IsEnabled = e.NewValue != 0;
         }
     }
