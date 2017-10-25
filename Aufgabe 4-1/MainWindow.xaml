@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Aufgabe_4_1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="146.914" Width="337.037"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}">
     <Grid>
-        
+        <Label Content="Matrikelnummer" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Name="lbMNr" Content="{Binding MyStudent.Matrikelnummer}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="103,0,0,0"/>
+        <Label Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,31,0,0"/>
+        <Label Content="{Binding MyStudent.Name}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="103,31,0,0"/>
     </Grid>
 </Window>
