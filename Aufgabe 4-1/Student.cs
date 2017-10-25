@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConsoleApp2
+namespace Aufgabe_4_1
 {
     internal class Student
     {
