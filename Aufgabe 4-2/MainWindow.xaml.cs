@@ -32,11 +32,11 @@ namespace DataBinding
         {
             InitializeComponent();
 
-            Binding myBinding = new Binding("MyField");
-            myBinding.Source = MyObject;
-            A.SetBinding(Label.ContentProperty, myBinding);
+            Binding myBinding = new Binding(/* 1 */ "MyField" /* 1 */);
+            myBinding.Source = /* 2 */ MyObject /* 2 */;
+            A.SetBinding(/* 3 */ Label.ContentProperty /* 3 */ , myBinding);
 
-            D.DataContext = this;
+            D.DataContext = /* 4 */ this /* 4 */;
         }
 
         private void Change(object sender, RoutedEventArgs e)
@@ -57,7 +57,7 @@ namespace DataBinding
         {
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler /* 12 */ PropertyChanged /* 12 */;
 
         /// <summary>
         /// Raise a PropertyChanged event.
@@ -80,7 +80,7 @@ namespace DataBinding
             set
             {
                 _MyField = value;
-                RaisePropertyChanged(nameof(MyField));
+                RaisePropertyChanged(/* 11 */ nameof(MyField) /* 11 */);
             }
             get
             {
