@@ -35,8 +35,11 @@ b) In der Diskussion fallen die Begriffe Over- und Undershooting.
 Worum handelt es sich dabei, und welcher Aspekt der geplanten 
 Benutzerschnittstelle sollte sich daran orientieren?
 
-Diese Worte sind nicht im Script oder bei Google in 
-diesem Kontext auffindbar. 
+Over- und Undershooting meint, dass jemand über das Ziel hinausfährt
+oder davor stoppt. Um dies zu verhindern sollten die Ziele (also alle
+Elemente welche anklickbar seien sollen) gleich groß sein, und ihre 
+Größe nicht ändern, um Kongruenz  zwischen visuellem Eindruck,
+Erwartung und Realität her zu stellen.
 "
             );
         }
