@@ -8,7 +8,11 @@ namespace Aufgabe_4_1
     /// </summary>
     public partial class MainWindow : Window
     {
-        public Student MyStudent { get; set; } = new Student() { Matrikelnummer = "123456", Name="Jonas" };
+        public Student MyStudent { get; set; } = new Student() {
+            Matrikelnummer = new Random().Next(0, 1000000).ToString("D6"),
+            Name = Environment.UserName
+        };
+
         public Editor editor = new Editor();
 
         public MainWindow()
