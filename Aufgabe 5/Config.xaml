@@ -1,0 +1,20 @@
+﻿<Window x:Class="FittsExercise.Config"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FittsExercise"
+        mc:Ignorable="d"
+        Title="Config" Height="300" Width="300">
+    <Grid>
+        <Label Content="ID (arbitrary)" HorizontalAlignment="Left" Margin="30,60,0,0" VerticalAlignment="Top"/>
+        <Label Content="Number of Tasks" HorizontalAlignment="Left" Margin="30,120,0,0" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding ID}" HorizontalAlignment="Left" Height="23" Margin="160,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Text="{Binding NumberOfTasks}" HorizontalAlignment="Left" Height="23" Margin="160,120,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <CheckBox IsChecked="{Binding ResetMousePosition}" Content="Reset mouse position" HorizontalAlignment="Left" Margin="52,184,0,0" VerticalAlignment="Top"/>
+        <CheckBox IsChecked="{Binding Precueing}" Content="Precueing" HorizontalAlignment="Left" Margin="52,204,0,0" VerticalAlignment="Top"/>
+        <Button Content="OK" Click="OnOkClick" HorizontalAlignment="Left" Margin="60,230,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Cancel" Click="OnCancelClick" HorizontalAlignment="Left" Margin="190,230,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>

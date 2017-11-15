@@ -69,8 +69,7 @@ namespace FittsExercise
             this.Target.Width = this.Target.Height = myRandomizer.Next(5, 100);
             this.Target.Margin = new Thickness(myRandomizer.Next(0, 500), myRandomizer.Next(0, 500), 0, 0);
             if (!this.precuing) this.Target.Visibility = Visibility.Hidden;
-
-//#toDo
+            
             // Build dialog for setting up the experiment
             // Instanciate UserWindow and show it as modal dialog
             // Transfer user input into the following variables
@@ -78,6 +77,18 @@ namespace FittsExercise
             //      nbrOfTasks
             //      resetMousePos
             //      precuing
+            Config config  = new Config();
+            bool? dialogResult = config.ShowDialog();
+            if(dialogResult.HasValue && dialogResult.Value)
+            {
+                Console.WriteLine("Config generated with values: id: {0}, numberOfTasks: {1}, resetMouse: {2}, precueing: {3}",
+                    config.ID, config.NumberOfTasks, config.ResetMousePosition, config.Precueing);
+            }
+            experimentId = config.ID;
+            nbrOfTasks = config.NumberOfTasks;
+            resetMousePos = config.ResetMousePosition;
+            precuing = config.Precueing;
+            
 
             // prepare arrays for recording data
             this.distanceX = new int[nbrOfTasks];
